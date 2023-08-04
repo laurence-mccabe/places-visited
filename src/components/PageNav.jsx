@@ -14,6 +14,12 @@ const PageNav = () => {
         <li>
           <NavLink to="/Product">Product</NavLink>
         </li>
+        <li>
+          <NavLink to="/login">Login</NavLink>
+        </li>
+        <li>
+          <NavLink to="/About">About</NavLink>
+        </li>
       </ul>
     </nav>
   )
