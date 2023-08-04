@@ -1,12 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import AppNav from './components/AppNav' // test change for merge NOW ON 2 ----
-import Login from './Pages/Login'
-import Product from './Pages/Product'
-import Pricing from './Pages/Pricing'
-import Homepage from './Pages/Homepage'
-import PageNotFound from './Pages/PageNotFound'
-import AppLayout from './Pages/AppLayout'
+//removed all imports for merge test NOW ON 2. test will be done on main locally
 // test change for merge NOW ON 2
 // test change for merge NOW ON 2
 // test change for merge NOW ON 2
