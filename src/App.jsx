@@ -6,6 +6,11 @@ import Pricing from './Pages/Pricing'
 import Homepage from './Pages/Homepage'
 import PageNotFound from './Pages/PageNotFound'
 import AppLayout from './Pages/AppLayout'
+// test change for merge with MAIN 2 app.jsx line 9
+// test change for merge with branch 2 app.jsx line 9
+// test change for merge with MAIN 2 app.jsx line 9
+// test change for merge with branch 2 app.jsx line 9
+// test change for merge with MAIN 2 app.jsx line 9
 
 const App = () => {
   return (
