@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+import AppNav from './components/AppNav' // test change for merge NOW ON 2 ----
 import Login from './Pages/Login'
 import Product from './Pages/Product'
 import Pricing from './Pages/Pricing'
