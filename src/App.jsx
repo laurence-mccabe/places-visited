@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-//removed all imports for merge test NOW ON 2. test will be done on main locally
-// test change for merge NOW ON 2
-// test change for merge NOW ON 2
-// test change for merge NOW ON 2
-// test change for merge NOW ON 2
-// test change for merge NOW ON 2
+import PageNav from './components/PageNav' // commiting this in 2 after resetting main
+import PageNav from './components/PageNav'
+import PageNav from './components/PageNav'
+import PageNav from './components/PageNav'
+import PageNav from './components/PageNav'
+import PageNav from './components/PageNav'
+
 
 const App = () => {
   return (
