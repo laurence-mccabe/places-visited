@@ -1,12 +1,57 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from 'react'
 
 const CitiesContext = createContext()
 const BASE_URL = 'http://localhost:9000'
 
+const initialState = {
+  cities: [],
+  isLoading: false,
+  currentCity: {},
+}
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'loading':
+      return {
+        ...state,
+        isLoading: true,
+      }
+    case 'cities/loaded':
+      return {
+        ...state,
+        isLoading: false,
+        cities: action.payload,
+      }
+    case 'cities/created':
+      return {
+        ...state,
+        isLoading: false,
+        cities: action.payload,
+      }
+    case 'cities/deleted':
+      return {
+        ...state,
+        isLoading: false,
+        cities: action.payload,
+      }
+      default: throw new Error("Unknown action type")
+  }
+}
+
 const CitiesProvider = ({ children }) => {
-  const [cities, setCities] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
-  const [currentCity, setCurrentCity] = useState({})
+  const [{ cities, isLoading, currentCity }, dispatch] = useReducer(
+    reducer,
+    initialState
+  )
+  // const [cities, setCities] = useState([])
+  // const [isLoading, setIsLoading] = useState(false)
+  // const [currentCity, setCurrentCity] = useState({})
 
   useEffect(() => {
     console.log(' cities data =>', cities)
@@ -66,7 +111,7 @@ const CitiesProvider = ({ children }) => {
     try {
       setIsLoading(true)
       await fetch(`${BASE_URL}/cities/${id}`, {
-        method: 'DELETE'
+        method: 'DELETE',
       })
       setCities((cities) => cities.filter((city) => city.id !== id))
     } catch (error) {
@@ -79,7 +124,14 @@ const CitiesProvider = ({ children }) => {
 
   return (
     <CitiesContext.Provider
-      value={{ cities, isLoading, currentCity, getCity, createCity, deleteCity }}
+      value={{
+        cities,
+        isLoading,
+        currentCity,
+        getCity,
+        createCity,
+        deleteCity,
+      }}
     >
       {children}
     </CitiesContext.Provider>
