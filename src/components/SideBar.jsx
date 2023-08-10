@@ -5,10 +5,10 @@ import { Outlet } from 'react-router-dom'
 const SideBar = () => {
   return (
     <div className={styles.sidebar}>
-      {/* <Logo /> */}
+      
       <AppNav />
 
-      <Outlet /> {/*  similar to children prop (but for routes) */}
+      <Outlet /> 
 
       <footer className={styles.footer}>
         <p className={styles.copyright}> 

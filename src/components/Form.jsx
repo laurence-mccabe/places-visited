@@ -25,7 +25,7 @@ const BASE_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client'
 
 function Form() {
   const [lat, lng] = useUrlPositon()
-  const { createCity, isLoading } = useCities()
+  const {createCity, isLoading } = useCities()
   const navigate = useNavigate()
 
   const [cityName, setCityName] = useState('')
@@ -52,7 +52,7 @@ function Form() {
           throw new Error('That city does not exist, click somewhere else')
 
         setCityName(
-          data.city || data.locality || data.principalSubdivision || 'Unknown'
+          data.city || data.locality || 'Unknown'
         )
         setCountry(data.countryName)
         setEmoji(convertToEmoji(data.countryCode))
@@ -67,6 +67,7 @@ function Form() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log('handleSubmit', e)
     if (!cityName || !date) return
     const newCity = {
       cityName,

@@ -70,7 +70,6 @@ useEffect(() => {
                 </h5>{' '}
               </span>
             </Popup>
-            {/* <ChangeCenter position={[city.position.lat, city.position.lng]} /> */}
           </Marker>
         ))}
 

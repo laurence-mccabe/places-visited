@@ -37,20 +37,4 @@ const App = () => {
 
 export default App
 
-// useEffect(() => {
-//   try{
-//   setIsLoading(true)
-//   fetch(`${BASE_URL}/cities`)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     setCities(data)
-//     setIsLoading(false)
-//   })
-// } catch (error) {
-//   setIsLoading(false)
-//   alert("there was an error loading the cities")
-// }
-//   finally {
-//     setIsLoading(false)
-//   }
-// }, [])
+
