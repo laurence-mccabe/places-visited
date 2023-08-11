@@ -15,7 +15,7 @@ export default function Homepage() {
         <h2>
           An app which allows you to keep track of places you have visited.
         </h2>
-        <Link to="/app" className="cta">
+        <Link to="/login" className="cta">
           Start Tracking now{' '}
         </Link>
       </section>
