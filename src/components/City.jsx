@@ -21,15 +21,6 @@ function City() {
     getCity(id)
   }, [id,getCity])
 
-
-  // TEMP DATA
-  // const currentCity = {
-  //   cityName: "Lisbon",
-  //   emoji: "🇵🇹",
-  //   date: "2027-10-31T15:59:59.138Z",
-  //   notes: "My favorite place",
-  // };
-
   const { cityName, emoji, date, notes } = currentCity
   if (isLoading) return <Spinner />
 

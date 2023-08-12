@@ -4,7 +4,6 @@ import {
   useContext,
   useEffect,
   useReducer,
-  useState,
 } from 'react'
 
 const CitiesContext = createContext()
@@ -64,9 +63,6 @@ const CitiesProvider = ({ children }) => {
     reducer,
     initialState
   )
-  // const [cities, setCities] = useState([])
-  // const [isLoading, setIsLoading] = useState(false)
-  // const [currentCity, setCurrentCity] = useState({})
 
   useEffect(() => {
     console.log(' cities data =>', cities)
@@ -146,7 +142,6 @@ const CitiesProvider = ({ children }) => {
       await fetch(`${BASE_URL}/cities/${id}`, {
         method: 'DELETE',
       })
-      // setCities((cities) => cities.filter((city) => city.id !== id))
       dispatch({ type: 'city/deleted', payload: id })
     } catch (error) {
       dispatch({
