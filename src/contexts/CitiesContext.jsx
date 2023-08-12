@@ -1,5 +1,6 @@
 import {
   createContext,
+  useCallback,
   useContext,
   useEffect,
   useReducer,
@@ -90,8 +91,10 @@ const CitiesProvider = ({ children }) => {
     fetchCities()
   }, [])
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  const getCity = async (id) => {
-    if(Number(id) === currentCity.id) {return}
+  const getCity = useCallback(async (id) => {
+    if (Number(id) === currentCity.id) {
+      return
+    }
 
     dispatch({ type: 'loading' })
 
@@ -106,10 +109,10 @@ const CitiesProvider = ({ children }) => {
       })
       alert('there was an error loading the city')
     }
-  }
+  },[currentCity.id])
   ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   const createCity = async (newCity) => {
-    if (cities.map((city) => city.cityName === newCity.cityName)) {
+    if (cities.some((city) => city.cityName === newCity.cityName)) {
       console.log('city already exists, no need to add it again')
       alert('city already exists, no need to add it again')
       return
