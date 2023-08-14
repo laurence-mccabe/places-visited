@@ -30,4 +30,10 @@ After downloading the repository and navigating to the root directory, you will 
 3: Run the application:          npm run dev
 
 The application should run after this. 
-The homepage is just a dummy page. ** Click on the button "Start tracking now" at the bottom of the homepage to start using the application. **
+Except for the login tab in the nav menu, all tabs are not providing any functionality.
+
+*Update 14.8.23:
+The app must now be accessed via the login page (nav menu) first, simply hit login to access the app. 
+Login functionality (serverless) has now been implemented, which means you cannot access the app unless you have logged in.
+Logging out will log you out and return you to the main page, from there you will again need to login to return to the app.
+Trying to access the app without logging in will redirect you to the login page.
