@@ -11,7 +11,7 @@ import Spinner from './Spinner'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import { useCities } from '../contexts/CitiesContext'
-import { useNavigate } from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 const convertToEmoji = (countryCode) => {
   const codePoints = countryCode
