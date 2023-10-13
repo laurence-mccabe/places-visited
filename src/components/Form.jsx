@@ -39,6 +39,7 @@ function Form() {
 
   useEffect(() => {
     if (!lat || !lng) return
+    
 
     async function fetchCityData() {
       try {
@@ -64,21 +65,25 @@ function Form() {
     }
     fetchCityData()
   }, [lat, lng])
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('handleSubmit', e)
     if (!cityName || !date) return
     const newCity = {
+      //Jsonbinio only creates a binId which cannot be accessed with out current code for json server. so need to create another one.
       cityName,
       country,
       emoji,
       date,
       notes,
-      position: { lat, lng },
-    }
+      id: Math.floor(Math.random() * 9000000000) + 1000000000,
+      position: { lat, lng }
+    };
+    const id = newCity.id
     console.log('newCity', newCity)
-    await createCity(newCity)
+    await createCity(newCity,id)
     navigate('/app/cities')
   }
 

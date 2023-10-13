@@ -16,7 +16,7 @@ const CityItem = ({ city }) => {
 
   function handleClick(e) {
     e.preventDefault();
-    deleteCity(id);
+    deleteCity(cityName);
   }
 
   return (
