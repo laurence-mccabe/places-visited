@@ -1,7 +1,7 @@
 ## Introduction
 
 - This is a small project which takes advantage of several API's to allow a user to select any number of locations on a map, store data
-  about that location (notes) and view these places on a map via markers placed at the each location on the map.
+  about that location (notes) and view these places on a map via markers placed on the map for each location.
 
 ## API'S (info on how the app was made)
 The app owes it functionality to several Api's:
