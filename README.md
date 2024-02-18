@@ -6,8 +6,8 @@
 ## API'S (info on how the app was made)
 The app owes it functionality to several Api's:
 - React-leaflet API
- - It displays a map and allows data to be rendered and saved to map view (markers etc.) it also allows
-   information like latitude and longitude to be collected from the event object (produced by leaflet) when the user clicks on the screen.
+  - Displays a map and allows data to be rendered and saved to map view (markers etc.) it also allows
+    information like latitude and longitude to be collected from the event object (produced by leaflet) when the user clicks on the screen.
 - The reverse Geo Code API provided by big data cloud.
   - This allows a user to submit latitude and longtitude co-ordinates to it and recieve various associated data back about that particular location.
 - The geoLocation API on the navigator provided by the browser.
@@ -23,9 +23,9 @@ The app owes it functionality to several Api's:
 
 Before setting up and running the project, ensure you have the following installed on your machine:
 - [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/) 
-
-This is a Vite project so will not run using npm start. Instead you wil need to use "npm run dev" to run the project, but only after running the command "npm install" first. "npm install" will install vite as well as the other packages listed in the dependencies and devDependencies section of the package.json file. The process to follow is here again below:
+- [npm](https://www.npmjs.com/)
+- 
+## How to install and use:
 
 ## 1: Installation
 
@@ -53,9 +53,12 @@ npm run dev
 ```
 
 ## Login and use the app
-1: The application should not be running, you can login via the only functional tab which is the login tab and use the app:
+1: The application should now be running, you can login via the only functional tab which is the login tab and use the app:
  - you can select a place, make notes about it and then view the place on the map.
  - select as many places as you like.
+
+## Note
+This is a Vite project so will not run using npm start. "npm install" will install vite as well as the other packages listed in the dependencies and devDependencies section of the package.json file.
 
 the directory structure is as follows:
 
