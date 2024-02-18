@@ -1,5 +1,5 @@
 ## Usage
-Click on "Start Tracking Now" to start using the app on the following link: places-visited.netlify.app/
+Click on "Start Tracking Now" to start using the app on the following link: https://places-visited.netlify.app
 
 ## Introduction
 
