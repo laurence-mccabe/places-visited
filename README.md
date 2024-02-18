@@ -23,6 +23,8 @@ Except for the login tab in the nav menu, all tabs are not providing any functio
 
 the directory structure is as follows:
 
+## Folder structure:
+```
 .
 ├── assets
 │ └── react.svg
@@ -80,6 +82,9 @@ the directory structure is as follows:
 ├── App.jsx
 ├── index.css
 └── main.jsx
+```
+
+
 
 \*Update 14.8.23:
 The app must now be accessed via the login page (nav menu) first, simply hit login to access the app.
