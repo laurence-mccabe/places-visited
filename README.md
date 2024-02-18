@@ -1,3 +1,6 @@
+## Usage
+Click on "Start Tracking Now" to start using the app on the following link: places-visited.netlify.app/
+
 ## Introduction
 
 - This is a small project which takes advantage of several API's to allow a user to select any number of locations on a map, store data
